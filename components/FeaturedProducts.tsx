@@ -8,20 +8,20 @@ export default async function FeaturedProducts() {
   const products = await getProducts();
 
   return (
-    <section className="py-20 sm:py-28 bg-stone-50/50">
+    <section className="py-20 sm:py-28 bg-neutral-950">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100/80 border border-emerald-200 mb-6">
-            <Package className="h-4 w-4 text-emerald-600" />
-            <span className="text-sm font-medium text-emerald-800">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-950/50 border border-red-900/30 mb-6">
+            <Package className="h-4 w-4 text-red-500" />
+            <span className="text-sm font-medium text-red-200">
               Curated Selection
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
             Featured Products
           </h2>
-          <p className="text-lg text-stone-600 leading-relaxed">
+          <p className="text-lg text-neutral-400 leading-relaxed">
             Discover our handpicked collection of premium supplements and specialty coffee, 
             each crafted to support your transformation journey.
           </p>
@@ -61,7 +61,7 @@ export default async function FeaturedProducts() {
             asChild
             variant="outline"
             size="lg"
-            className="border-2 border-stone-200 hover:border-emerald-300 hover:bg-emerald-50/50 font-semibold px-8"
+            className="border-2 border-neutral-800 hover:border-red-600 hover:bg-red-950/30 font-semibold px-8 text-neutral-300"
           >
             <Link href="/shop" className="flex items-center gap-2">
               View All Products

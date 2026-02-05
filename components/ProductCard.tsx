@@ -63,7 +63,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       particleCount: 60,
       spread: 70,
       origin: { y: 0.7 },
-      colors: ["#059669", "#14b8a6", "#10b981", "#34d399"],
+      colors: ["#dc2626", "#991b1b", "#b91c1c", "#ef4444"],
     });
 
     // Add to cart
@@ -85,13 +85,13 @@ export default function ProductCard({ product }: ProductCardProps) {
   return (
     <Link
       href={`/products/${product.handle}`}
-      className="group relative block bg-white rounded-2xl overflow-hidden border border-stone-100 card-lift"
+      className="group relative block bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-800 card-lift"
     >
       {/* Image Container */}
-      <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-stone-100 to-stone-50">
+      <div className="relative aspect-square overflow-hidden bg-neutral-800">
         {/* Loading skeleton */}
         {!imageLoaded && (
-          <div className="absolute inset-0 bg-gradient-to-r from-stone-100 via-stone-200 to-stone-100 animate-shimmer" />
+          <div className="absolute inset-0 bg-gradient-to-r from-neutral-800 via-neutral-700 to-neutral-800 animate-shimmer" />
         )}
         
         {image ? (
@@ -106,17 +106,17 @@ export default function ProductCard({ product }: ProductCardProps) {
             onLoad={() => setImageLoaded(true)}
           />
         ) : (
-          <div className="w-full h-full bg-gradient-to-br from-emerald-100 to-teal-100 flex items-center justify-center">
-            <ShoppingBag className="h-16 w-16 text-emerald-300" />
+          <div className="w-full h-full bg-gradient-to-br from-red-900 to-neutral-900 flex items-center justify-center">
+            <ShoppingBag className="h-16 w-16 text-red-500" />
           </div>
         )}
 
         {/* Overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
         {/* Badges */}
         <div className="absolute top-3 left-3 flex flex-col gap-2">
-          <Badge className="bg-white/90 text-stone-800 backdrop-blur-sm border-0 shadow-sm">
+          <Badge className="bg-red-600 text-white border-0">
             New
           </Badge>
         </div>
@@ -127,8 +127,8 @@ export default function ProductCard({ product }: ProductCardProps) {
             onClick={handleAddToCart}
             className={`w-full font-semibold transition-all duration-300 ${
               isAdded
-                ? "bg-emerald-600 hover:bg-emerald-600"
-                : "bg-white/95 backdrop-blur-sm text-stone-900 hover:bg-white shadow-lg"
+                ? "bg-red-600 hover:bg-red-600"
+                : "bg-neutral-900/95 backdrop-blur-sm text-white hover:bg-neutral-800 border border-neutral-700"
             }`}
             disabled={isAdded || !variant?.availableForSale}
           >
@@ -154,29 +154,29 @@ export default function ProductCard({ product }: ProductCardProps) {
           {[...Array(5)].map((_, i) => (
             <Star
               key={i}
-              className="h-3.5 w-3.5 fill-amber-400 text-amber-400"
+              className="h-3.5 w-3.5 fill-red-500 text-red-500"
             />
           ))}
-          <span className="text-xs text-stone-400 ml-1">(48)</span>
+          <span className="text-xs text-neutral-500 ml-1">(48)</span>
         </div>
 
         {/* Title */}
-        <h3 className="font-semibold text-stone-900 text-lg leading-tight mb-2 group-hover:text-emerald-600 transition-colors line-clamp-1">
+        <h3 className="font-semibold text-white text-lg leading-tight mb-2 group-hover:text-red-500 transition-colors line-clamp-1">
           {product.title}
         </h3>
 
         {/* Description */}
-        <p className="text-sm text-stone-500 line-clamp-2 mb-4 leading-relaxed">
+        <p className="text-sm text-neutral-400 line-clamp-2 mb-4 leading-relaxed">
           {product.description}
         </p>
 
         {/* Price & CTA */}
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-2xl font-bold text-stone-900">
+            <p className="text-2xl font-bold text-white">
               ${price.toFixed(2)}
             </p>
-            <p className="text-xs text-stone-400">
+            <p className="text-xs text-neutral-500">
               {product.priceRange.minVariantPrice.currencyCode}
             </p>
           </div>
@@ -185,7 +185,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           <Button
             size="icon"
             onClick={handleAddToCart}
-            className="h-10 w-10 rounded-full bg-emerald-100 text-emerald-600 hover:bg-emerald-600 hover:text-white transition-all duration-300 shadow-sm sm:hidden"
+            className="h-10 w-10 rounded-full bg-red-950 text-red-500 hover:bg-red-600 hover:text-white transition-all duration-300 shadow-sm sm:hidden"
             disabled={isAdded || !variant?.availableForSale}
           >
             {isAdded ? (
@@ -198,7 +198,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       </div>
 
       {/* Bottom accent line */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-red-600 to-red-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
     </Link>
   );
 }

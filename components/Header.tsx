@@ -15,14 +15,14 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 glass border-b border-stone-200/50">
+    <header className="sticky top-0 z-50 glass border-b border-red-900/20">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <div className="flex items-center">
           <Link href="/" className="group flex items-center gap-3">
             {/* Logo Icon */}
             <div className="relative">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 shadow-lg shadow-emerald-500/20 transition-all duration-300 group-hover:shadow-emerald-500/40 group-hover:scale-105">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-red-600 to-red-800 shadow-lg shadow-red-600/20 transition-all duration-300 group-hover:shadow-red-600/40 group-hover:scale-105">
                 <svg
                   className="h-6 w-6 text-white"
                   fill="none"
@@ -44,7 +44,7 @@ export default function Header() {
                 </svg>
               </div>
               {/* Glow effect */}
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-emerald-400 to-teal-500 opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-50" />
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-red-500 to-red-700 opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-50" />
             </div>
 
             {/* Brand Name */}
@@ -52,7 +52,7 @@ export default function Header() {
               <span className="text-xl font-bold tracking-tight text-gradient">
                 Phoinix
               </span>
-              <span className="text-[10px] uppercase tracking-widest text-stone-500 -mt-1">
+              <span className="text-[10px] uppercase tracking-widest text-neutral-500 -mt-1">
                 Transformations
               </span>
             </div>
@@ -63,31 +63,31 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-8">
           <Link
             href="/"
-            className="text-sm font-medium text-stone-600 hover:text-emerald-600 transition-colors relative group"
+            className="text-sm font-medium text-neutral-400 hover:text-red-500 transition-colors relative group"
           >
             Home
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500 transition-all duration-300 group-hover:w-full" />
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-800 transition-all duration-300 group-hover:w-full" />
           </Link>
           <Link
             href="/shop"
-            className="text-sm font-medium text-stone-600 hover:text-emerald-600 transition-colors relative group"
+            className="text-sm font-medium text-neutral-400 hover:text-red-500 transition-colors relative group"
           >
             Shop
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500 transition-all duration-300 group-hover:w-full" />
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-800 transition-all duration-300 group-hover:w-full" />
           </Link>
           <Link
             href="/about"
-            className="text-sm font-medium text-stone-600 hover:text-emerald-600 transition-colors relative group"
+            className="text-sm font-medium text-neutral-400 hover:text-red-500 transition-colors relative group"
           >
             About
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500 transition-all duration-300 group-hover:w-full" />
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-800 transition-all duration-300 group-hover:w-full" />
           </Link>
           <Link
             href="/contact"
-            className="text-sm font-medium text-stone-600 hover:text-emerald-600 transition-colors relative group"
+            className="text-sm font-medium text-neutral-400 hover:text-red-500 transition-colors relative group"
           >
             Contact
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500 transition-all duration-300 group-hover:w-full" />
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-800 transition-all duration-300 group-hover:w-full" />
           </Link>
         </div>
 
@@ -99,20 +99,20 @@ export default function Header() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="relative hover:bg-emerald-50 transition-colors"
+                className="relative hover:bg-red-950/30 transition-colors"
               >
-                <ShoppingBag className="h-5 w-5 text-stone-600" />
+                <ShoppingBag className="h-5 w-5 text-neutral-400" />
                 {totalItems > 0 && (
-                  <Badge className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0 bg-emerald-600 text-white text-xs font-bold border-2 border-white">
+                  <Badge className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0 bg-red-600 text-white text-xs font-bold border-2 border-neutral-900">
                     {totalItems}
                   </Badge>
                 )}
               </Button>
             </SheetTrigger>
-            <SheetContent className="w-full sm:max-w-lg flex flex-col">
+            <SheetContent className="w-full sm:max-w-lg flex flex-col bg-neutral-900 border-neutral-800">
               <SheetHeader>
-                <SheetTitle className="flex items-center gap-2 text-lg font-bold">
-                  <ShoppingBag className="h-5 w-5 text-emerald-600" />
+                <SheetTitle className="flex items-center gap-2 text-lg font-bold text-white">
+                  <ShoppingBag className="h-5 w-5 text-red-600" />
                   Your Cart ({totalItems})
                 </SheetTitle>
               </SheetHeader>
@@ -120,16 +120,16 @@ export default function Header() {
               <div className="flex-1 overflow-y-auto py-6">
                 {items.length === 0 ? (
                   <div className="flex flex-col items-center justify-center h-full text-center space-y-4">
-                    <div className="w-20 h-20 rounded-full bg-stone-100 flex items-center justify-center">
-                      <ShoppingBag className="h-10 w-10 text-stone-400" />
+                    <div className="w-20 h-20 rounded-full bg-neutral-800 flex items-center justify-center">
+                      <ShoppingBag className="h-10 w-10 text-neutral-600" />
                     </div>
                     <div>
-                      <p className="text-lg font-medium text-stone-900">Your cart is empty</p>
-                      <p className="text-sm text-stone-500">Add some products to get started</p>
+                      <p className="text-lg font-medium text-white">Your cart is empty</p>
+                      <p className="text-sm text-neutral-500">Add some products to get started</p>
                     </div>
                     <Button
                       onClick={() => setIsOpen(false)}
-                      className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white"
+                      className="bg-gradient-to-r from-red-600 to-red-800 hover:from-red-500 hover:to-red-700 text-white"
                       asChild
                     >
                       <Link href="/shop">Continue Shopping</Link>
@@ -140,9 +140,9 @@ export default function Header() {
                     {items.map((item) => (
                       <div
                         key={item.id}
-                        className="flex gap-4 p-4 rounded-xl bg-stone-50 border border-stone-100"
+                        className="flex gap-4 p-4 rounded-xl bg-neutral-800 border border-neutral-700"
                       >
-                        <div className="relative h-20 w-20 rounded-lg overflow-hidden bg-white flex-shrink-0">
+                        <div className="relative h-20 w-20 rounded-lg overflow-hidden bg-neutral-900 flex-shrink-0">
                           {item.image ? (
                             <Image
                               src={item.image}
@@ -151,48 +151,48 @@ export default function Header() {
                               className="object-cover"
                             />
                           ) : (
-                            <div className="w-full h-full bg-gradient-to-br from-emerald-100 to-teal-100 flex items-center justify-center">
-                              <ShoppingBag className="h-8 w-8 text-emerald-400" />
+                            <div className="w-full h-full bg-gradient-to-br from-red-900 to-neutral-900 flex items-center justify-center">
+                              <ShoppingBag className="h-8 w-8 text-red-500" />
                             </div>
                           )}
                         </div>
                         <div className="flex-1 min-w-0">
                           <Link
                             href={`/products/${item.handle}`}
-                            className="font-medium text-stone-900 hover:text-emerald-600 transition-colors line-clamp-1"
+                            className="font-medium text-white hover:text-red-500 transition-colors line-clamp-1"
                             onClick={() => setIsOpen(false)}
                           >
                             {item.title}
                           </Link>
-                          <p className="text-sm text-stone-500 mt-1">
+                          <p className="text-sm text-neutral-500 mt-1">
                             ${item.price.toFixed(2)}
                           </p>
                           <div className="flex items-center gap-2 mt-2">
                             <Button
                               variant="outline"
                               size="icon"
-                              className="h-7 w-7"
+                              className="h-7 w-7 border-neutral-700 bg-neutral-800"
                               onClick={() => updateQuantity(item.id, item.quantity - 1)}
                             >
-                              <Minus className="h-3 w-3" />
+                              <Minus className="h-3 w-3 text-neutral-400" />
                             </Button>
-                            <span className="w-8 text-center text-sm font-medium">
+                            <span className="w-8 text-center text-sm font-medium text-white">
                               {item.quantity}
                             </span>
                             <Button
                               variant="outline"
                               size="icon"
-                              className="h-7 w-7"
+                              className="h-7 w-7 border-neutral-700 bg-neutral-800"
                               onClick={() => updateQuantity(item.id, item.quantity + 1)}
                             >
-                              <Plus className="h-3 w-3" />
+                              <Plus className="h-3 w-3 text-neutral-400" />
                             </Button>
                           </div>
                         </div>
                         <Button
                           variant="ghost"
                           size="icon"
-                          className="h-8 w-8 text-stone-400 hover:text-red-500 flex-shrink-0"
+                          className="h-8 w-8 text-neutral-500 hover:text-red-500 flex-shrink-0"
                           onClick={() => removeItem(item.id)}
                         >
                           <Trash2 className="h-4 w-4" />
@@ -204,19 +204,19 @@ export default function Header() {
               </div>
 
               {items.length > 0 && (
-                <div className="border-t border-stone-200 pt-6 space-y-4">
+                <div className="border-t border-neutral-800 pt-6 space-y-4">
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-stone-500">Subtotal</span>
-                    <span className="font-medium text-stone-900">${totalPrice.toFixed(2)}</span>
+                    <span className="text-neutral-400">Subtotal</span>
+                    <span className="font-medium text-white">${totalPrice.toFixed(2)}</span>
                   </div>
                   <div className="flex items-center justify-between text-lg font-bold">
-                    <span className="text-stone-900">Total</span>
-                    <span className="text-emerald-600">${totalPrice.toFixed(2)}</span>
+                    <span className="text-white">Total</span>
+                    <span className="text-red-500">${totalPrice.toFixed(2)}</span>
                   </div>
-                  <Button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-semibold py-6 btn-shine">
+                  <Button className="w-full bg-gradient-to-r from-red-600 to-red-800 hover:from-red-500 hover:to-red-700 text-white font-semibold py-6 btn-shine">
                     Checkout
                   </Button>
-                  <p className="text-xs text-center text-stone-500">
+                  <p className="text-xs text-center text-neutral-500">
                     Shipping & taxes calculated at checkout
                   </p>
                 </div>
@@ -228,10 +228,10 @@ export default function Header() {
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild className="md:hidden">
               <Button variant="ghost" size="icon">
-                <Menu className="h-5 w-5 text-stone-600" />
+                <Menu className="h-5 w-5 text-neutral-400" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-full sm:max-w-sm">
+            <SheetContent side="right" className="w-full sm:max-w-sm bg-neutral-900 border-neutral-800">
               <SheetHeader>
                 <SheetTitle className="text-gradient">Menu</SheetTitle>
               </SheetHeader>
@@ -245,7 +245,7 @@ export default function Header() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="text-lg font-medium text-stone-700 hover:text-emerald-600 py-3 px-4 rounded-lg hover:bg-stone-50 transition-colors"
+                    className="text-lg font-medium text-neutral-300 hover:text-red-500 py-3 px-4 rounded-lg hover:bg-neutral-800 transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.label}

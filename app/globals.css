@@ -45,55 +45,58 @@
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
   
-  /* Phoinix Brand Colors */
-  --color-emerald-50: #ecfdf5;
-  --color-emerald-100: #d1fae5;
-  --color-emerald-200: #a7f3d0;
-  --color-emerald-300: #6ee7b7;
-  --color-emerald-400: #34d399;
-  --color-emerald-500: #10b981;
-  --color-emerald-600: #059669;
-  --color-emerald-700: #047857;
-  --color-emerald-800: #065f46;
-  --color-emerald-900: #064e3b;
+  /* Phoinix Red/Black Brand Colors */
+  --color-red-50: #fef2f2;
+  --color-red-100: #fee2e2;
+  --color-red-200: #fecaca;
+  --color-red-300: #fca5a5;
+  --color-red-400: #f87171;
+  --color-red-500: #ef4444;
+  --color-red-600: #dc2626;
+  --color-red-700: #b91c1c;
+  --color-red-800: #991b1b;
+  --color-red-900: #7f1d1d;
   
-  --color-teal-50: #f0fdfa;
-  --color-teal-100: #ccfbf1;
-  --color-teal-200: #99f6e4;
-  --color-teal-300: #5eead4;
-  --color-teal-400: #2dd4bf;
-  --color-teal-500: #14b8a6;
-  --color-teal-600: #0d9488;
-  --color-teal-700: #0f766e;
-  --color-teal-800: #115e59;
-  --color-teal-900: #134e4a;
+  --color-gray-50: #fafafa;
+  --color-gray-100: #f5f5f5;
+  --color-gray-200: #e5e5e5;
+  --color-gray-300: #d4d4d4;
+  --color-gray-400: #a3a3a3;
+  --color-gray-500: #737373;
+  --color-gray-600: #525252;
+  --color-gray-700: #404040;
+  --color-gray-800: #262626;
+  --color-gray-900: #171717;
+  
+  --color-black: #000000;
+  --color-white: #ffffff;
 }
 
 :root {
   --radius: 0.625rem;
-  --background: #fafaf9;
-  --foreground: #1c1917;
-  --card: #ffffff;
-  --card-foreground: #1c1917;
-  --popover: #ffffff;
-  --popover-foreground: #1c1917;
-  --primary: #059669;
+  --background: #0a0a0a;
+  --foreground: #fafafa;
+  --card: #171717;
+  --card-foreground: #fafafa;
+  --popover: #171717;
+  --popover-foreground: #fafafa;
+  --primary: #dc2626;
   --primary-foreground: #ffffff;
-  --secondary: #f5f5f4;
-  --secondary-foreground: #44403c;
-  --muted: #f5f5f4;
-  --muted-foreground: #78716c;
-  --accent: #14b8a6;
+  --secondary: #262626;
+  --secondary-foreground: #e5e5e5;
+  --muted: #262626;
+  --muted-foreground: #a3a3a3;
+  --accent: #991b1b;
   --accent-foreground: #ffffff;
   --destructive: #ef4444;
-  --border: #e7e5e4;
-  --input: #e7e5e4;
-  --ring: #059669;
-  --chart-1: #059669;
-  --chart-2: #14b8a6;
-  --chart-3: #0d9488;
-  --chart-4: #10b981;
-  --chart-5: #34d399;
+  --border: #262626;
+  --input: #262626;
+  --ring: #dc2626;
+  --chart-1: #dc2626;
+  --chart-2: #991b1b;
+  --chart-3: #b91c1c;
+  --chart-4: #ef4444;
+  --chart-5: #f87171;
 }
 
 @layer base {
@@ -205,7 +208,7 @@
 /* Gradient text utility */
 .text-gradient {
   @apply bg-clip-text text-transparent;
-  background-image: linear-gradient(135deg, #059669 0%, #14b8a6 50%, #0d9488 100%);
+  background-image: linear-gradient(135deg, #dc2626 0%, #991b1b 50%, #dc2626 100%);
 }
 
 .text-gradient-gold {
@@ -215,13 +218,13 @@
 
 /* Glass effect */
 .glass {
-  @apply bg-white/80 backdrop-blur-xl;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  @apply bg-neutral-900/80 backdrop-blur-xl;
+  border: 1px solid rgba(220, 38, 38, 0.2);
 }
 
 .glass-dark {
-  @apply bg-black/20 backdrop-blur-xl;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  @apply bg-black/40 backdrop-blur-xl;
+  border: 1px solid rgba(220, 38, 38, 0.1);
 }
 
 /* Card hover lift */
@@ -231,7 +234,7 @@
 
 .card-lift:hover {
   @apply -translate-y-2 shadow-2xl;
-  box-shadow: 0 25px 50px -12px rgba(5, 150, 105, 0.15);
+  box-shadow: 0 25px 50px -12px rgba(220, 38, 38, 0.25);
 }
 
 /* Button shine effect */
@@ -267,18 +270,18 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-stone-100;
+  @apply bg-neutral-900;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-emerald-300 rounded-full;
+  @apply bg-red-600 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-emerald-400;
+  @apply bg-red-500;
 }
 
 /* Selection color */
 ::selection {
-  @apply bg-emerald-200 text-emerald-900;
+  @apply bg-red-900 text-red-100;
 }
