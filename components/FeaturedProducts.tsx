@@ -74,28 +74,37 @@ export default async function FeaturedProducts() {
   );
 }
 
-// Demo products for when Shopify is not connected
+// Demo products for when Shopify is not connected - using real Phoinix product images
 const demoProducts = [
   {
     id: "demo-1",
-    title: "Phoinix Rise Morning Blend",
-    handle: "phoinix-rise-morning-blend",
-    description: "A bold, energizing coffee blend with notes of chocolate and caramel. Perfect for starting your day with intention.",
+    title: "CoQ10 Ubiquinone",
+    handle: "coq10-ubiquinone",
+    description: "Antioxidant support for heart health and cellular energy production. 30 capsules.",
     priceRange: {
       minVariantPrice: {
-        amount: "24.99",
+        amount: "30.00",
         currencyCode: "USD",
       },
     },
     images: {
-      edges: [],
+      edges: [
+        {
+          node: {
+            url: "/coq10.jpg",
+            altText: "CoQ10 Ubiquinone Supplement",
+            width: 500,
+            height: 500,
+          },
+        },
+      ],
     },
     variants: {
       edges: [
         {
           node: {
             id: "variant-1",
-            title: "Default",
+            title: "30 Capsules",
             availableForSale: true,
           },
         },
@@ -104,24 +113,33 @@ const demoProducts = [
   },
   {
     id: "demo-2",
-    title: "Vitality Greens Powder",
-    handle: "vitality-greens-powder",
-    description: "45+ superfoods in one scoop. Organic greens, adaptogens, and probiotics for daily vitality.",
+    title: "Omega-3 Fish Oil",
+    handle: "omega-3-fish-oil",
+    description: "Pharmaceutical-grade omega-3s from wild-caught fish. Supports heart, brain, and joint health.",
     priceRange: {
       minVariantPrice: {
-        amount: "49.99",
+        amount: "28.00",
         currencyCode: "USD",
       },
     },
     images: {
-      edges: [],
+      edges: [
+        {
+          node: {
+            url: "/omega3.jpg",
+            altText: "Omega-3 Fish Oil Supplement",
+            width: 500,
+            height: 500,
+          },
+        },
+      ],
     },
     variants: {
       edges: [
         {
           node: {
             id: "variant-2",
-            title: "Default",
+            title: "60 Softgels",
             availableForSale: true,
           },
         },
@@ -130,24 +148,33 @@ const demoProducts = [
   },
   {
     id: "demo-3",
-    title: "Omega-3 Elite Fish Oil",
-    handle: "omega-3-elite-fish-oil",
-    description: "Pharmaceutical-grade omega-3s from wild-caught fish. Supports heart, brain, and joint health.",
+    title: "5-HTP Supplement",
+    handle: "5-htp-supplement",
+    description: "Natural mood support and sleep aid. Promotes serotonin production for balanced wellness.",
     priceRange: {
       minVariantPrice: {
-        amount: "34.99",
+        amount: "24.99",
         currencyCode: "USD",
       },
     },
     images: {
-      edges: [],
+      edges: [
+        {
+          node: {
+            url: "/5htp.jpg",
+            altText: "5-HTP Supplement",
+            width: 500,
+            height: 500,
+          },
+        },
+      ],
     },
     variants: {
       edges: [
         {
           node: {
             id: "variant-3",
-            title: "Default",
+            title: "60 Capsules",
             availableForSale: true,
           },
         },
@@ -156,24 +183,33 @@ const demoProducts = [
   },
   {
     id: "demo-4",
-    title: "Sleep & Recovery Complex",
-    handle: "sleep-recovery-complex",
-    description: "Natural sleep aid with magnesium, L-theanine, and melatonin. Wake up refreshed and restored.",
+    title: "Broken Top Coffee Blend",
+    handle: "broken-top-coffee-blend",
+    description: "Medium roast with chocolate-covered almonds, maple syrup, and citrus notes. The ritual opener for wellness routines.",
     priceRange: {
       minVariantPrice: {
-        amount: "39.99",
+        amount: "18.00",
         currencyCode: "USD",
       },
     },
     images: {
-      edges: [],
+      edges: [
+        {
+          node: {
+            url: "/broken-top-coffee.jpg",
+            altText: "Broken Top Coffee Blend",
+            width: 500,
+            height: 500,
+          },
+        },
+      ],
     },
     variants: {
       edges: [
         {
           node: {
             id: "variant-4",
-            title: "Default",
+            title: "12oz Whole Bean",
             availableForSale: true,
           },
         },

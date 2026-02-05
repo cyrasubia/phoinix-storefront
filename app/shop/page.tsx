@@ -38,7 +38,7 @@ export default async function ShopPage() {
           {/* Filter Bar */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8 pb-8 border-b border-stone-200">
             <p className="text-sm text-stone-500">
-              Showing {products.length > 0 ? products.length : 4} products
+              Showing {products.length > 0 ? products.length : demoProducts.length} products
             </p>
             <div className="flex items-center gap-4">
               <Button variant="outline" size="sm" className="gap-2">
@@ -79,70 +79,222 @@ export default async function ShopPage() {
   );
 }
 
-// Demo products for when Shopify is not connected
+// Demo products for when Shopify is not connected - using real Phoinix product images
 const demoProducts = [
   {
     id: "demo-1",
-    title: "Phoinix Rise Morning Blend",
-    handle: "phoinix-rise-morning-blend",
-    description: "A bold, energizing coffee blend with notes of chocolate and caramel. Perfect for starting your day with intention.",
+    title: "CoQ10 Ubiquinone",
+    handle: "coq10-ubiquinone",
+    description: "Antioxidant support for heart health and cellular energy production. Formulated to support overall health and well-being.",
+    priceRange: {
+      minVariantPrice: {
+        amount: "30.00",
+        currencyCode: "USD",
+      },
+    },
+    images: {
+      edges: [
+        {
+          node: {
+            url: "/coq10.jpg",
+            altText: "CoQ10 Ubiquinone Supplement",
+            width: 500,
+            height: 500,
+          },
+        },
+      ],
+    },
+    variants: {
+      edges: [{ node: { id: "variant-1", title: "30 Capsules", availableForSale: true } }],
+    },
+  },
+  {
+    id: "demo-2",
+    title: "Omega-3 Fish Oil",
+    handle: "omega-3-fish-oil",
+    description: "Pharmaceutical-grade omega-3s from wild-caught fish. Supports heart, brain, and joint health.",
+    priceRange: {
+      minVariantPrice: {
+        amount: "28.00",
+        currencyCode: "USD",
+      },
+    },
+    images: {
+      edges: [
+        {
+          node: {
+            url: "/omega3.jpg",
+            altText: "Omega-3 Fish Oil Supplement",
+            width: 500,
+            height: 500,
+          },
+        },
+      ],
+    },
+    variants: {
+      edges: [{ node: { id: "variant-2", title: "60 Softgels", availableForSale: true } }],
+    },
+  },
+  {
+    id: "demo-3",
+    title: "5-HTP Supplement",
+    handle: "5-htp-supplement",
+    description: "Natural mood support and sleep aid. Promotes serotonin production for balanced wellness and restful sleep.",
     priceRange: {
       minVariantPrice: {
         amount: "24.99",
         currencyCode: "USD",
       },
     },
-    images: { edges: [] },
+    images: {
+      edges: [
+        {
+          node: {
+            url: "/5htp.jpg",
+            altText: "5-HTP Supplement",
+            width: 500,
+            height: 500,
+          },
+        },
+      ],
+    },
     variants: {
-      edges: [{ node: { id: "variant-1", title: "12oz", availableForSale: true } }],
-    },
-  },
-  {
-    id: "demo-2",
-    title: "Vitality Greens Powder",
-    handle: "vitality-greens-powder",
-    description: "45+ superfoods in one scoop. Organic greens, adaptogens, and probiotics for daily vitality.",
-    priceRange: {
-      minVariantPrice: {
-        amount: "49.99",
-        currencyCode: "USD",
-      },
-    },
-    images: { edges: [] },
-    variants: {
-      edges: [{ node: { id: "variant-2", title: "30 servings", availableForSale: true } }],
-    },
-  },
-  {
-    id: "demo-3",
-    title: "Omega-3 Elite Fish Oil",
-    handle: "omega-3-elite-fish-oil",
-    description: "Pharmaceutical-grade omega-3s from wild-caught fish. Supports heart, brain, and joint health.",
-    priceRange: {
-      minVariantPrice: {
-        amount: "34.99",
-        currencyCode: "USD",
-      },
-    },
-    images: { edges: [] },
-    variants: {
-      edges: [{ node: { id: "variant-3", title: "60 softgels", availableForSale: true } }],
+      edges: [{ node: { id: "variant-3", title: "60 Capsules", availableForSale: true } }],
     },
   },
   {
     id: "demo-4",
-    title: "Sleep & Recovery Complex",
-    handle: "sleep-recovery-complex",
-    description: "Natural sleep aid with magnesium, L-theanine, and melatonin. Wake up refreshed.",
+    title: "Probiotics Supplement",
+    handle: "probiotics-supplement",
+    description: "Digestive health support with beneficial bacteria. Supports gut health and immune function.",
     priceRange: {
       minVariantPrice: {
-        amount: "39.99",
+        amount: "32.00",
         currencyCode: "USD",
       },
     },
-    images: { edges: [] },
+    images: {
+      edges: [
+        {
+          node: {
+            url: "/probiotics.jpg",
+            altText: "Probiotics Supplement",
+            width: 500,
+            height: 500,
+          },
+        },
+      ],
+    },
     variants: {
-      edges: [{ node: { id: "variant-4", title: "60 capsules", availableForSale: true } }],
+      edges: [{ node: { id: "variant-4", title: "60 Capsules", availableForSale: true } }],
+    },
+  },
+  {
+    id: "demo-5",
+    title: "Sea Moss Supplement",
+    handle: "sea-moss-supplement",
+    description: "Nutrient-dense sea vegetable rich in minerals. Supports thyroid health, immunity, and overall vitality.",
+    priceRange: {
+      minVariantPrice: {
+        amount: "29.99",
+        currencyCode: "USD",
+      },
+    },
+    images: {
+      edges: [
+        {
+          node: {
+            url: "/sea-moss.jpg",
+            altText: "Sea Moss Supplement",
+            width: 500,
+            height: 500,
+          },
+        },
+      ],
+    },
+    variants: {
+      edges: [{ node: { id: "variant-5", title: "60 Capsules", availableForSale: true } }],
+    },
+  },
+  {
+    id: "demo-6",
+    title: "Broken Top Coffee Blend",
+    handle: "broken-top-coffee-blend",
+    description: "Medium roast with chocolate-covered almonds, maple syrup, and citrus notes. SCA Specialty Grade, small-batch roasted in the USA.",
+    priceRange: {
+      minVariantPrice: {
+        amount: "18.00",
+        currencyCode: "USD",
+      },
+    },
+    images: {
+      edges: [
+        {
+          node: {
+            url: "/broken-top-coffee.jpg",
+            altText: "Broken Top Coffee Blend",
+            width: 500,
+            height: 500,
+          },
+        },
+      ],
+    },
+    variants: {
+      edges: [{ node: { id: "variant-6", title: "12oz Whole Bean", availableForSale: true } }],
+    },
+  },
+  {
+    id: "demo-7",
+    title: "Flathead Valley Coffee",
+    handle: "flathead-valley-coffee",
+    description: "Medium-dark roast with bakers chocolate, caramelized sugar, and warm spice. Bold wake-up routine coffee.",
+    priceRange: {
+      minVariantPrice: {
+        amount: "18.00",
+        currencyCode: "USD",
+      },
+    },
+    images: {
+      edges: [
+        {
+          node: {
+            url: "/flathead-valley-coffee.jpg",
+            altText: "Flathead Valley Coffee Blend",
+            width: 500,
+            height: 500,
+          },
+        },
+      ],
+    },
+    variants: {
+      edges: [{ node: { id: "variant-7", title: "12oz Whole Bean", availableForSale: true } }],
+    },
+  },
+  {
+    id: "demo-8",
+    title: "Rock Creek Coffee Blend",
+    handle: "rock-creek-coffee-blend",
+    description: "Medium roast with toffee, dark chocolate, and citrus balance. The Citrus + Chocolate hero for balanced energy rituals.",
+    priceRange: {
+      minVariantPrice: {
+        amount: "18.00",
+        currencyCode: "USD",
+      },
+    },
+    images: {
+      edges: [
+        {
+          node: {
+            url: "/rock-creek-coffee.jpg",
+            altText: "Rock Creek Coffee Blend",
+            width: 500,
+            height: 500,
+          },
+        },
+      ],
+    },
+    variants: {
+      edges: [{ node: { id: "variant-8", title: "12oz Whole Bean", availableForSale: true } }],
     },
   },
 ];
