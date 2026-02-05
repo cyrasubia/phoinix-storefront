@@ -43,7 +43,7 @@ export default async function FeaturedProducts() {
         ) : (
           /* Demo Products (when no Shopify connection) */
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
-            {demoProducts.map((product, index) => (
+            {demoProducts.slice(0, 8).map((product, index) => (
               <div
                 key={product.id}
                 className="animate-fade-in-up"
@@ -183,12 +183,12 @@ const demoProducts = [
   },
   {
     id: "demo-4",
-    title: "Broken Top Coffee Blend",
-    handle: "broken-top-coffee-blend",
-    description: "Medium roast with chocolate-covered almonds, maple syrup, and citrus notes. The ritual opener for wellness routines.",
+    title: "Phoinix Whey Protein",
+    handle: "phoinix-whey-protein",
+    description: "Hydrolyzed whey protein isolate for lean muscle growth and recovery. 25g protein per serving.",
     priceRange: {
       minVariantPrice: {
-        amount: "18.00",
+        amount: "45.00",
         currencyCode: "USD",
       },
     },
@@ -196,8 +196,8 @@ const demoProducts = [
       edges: [
         {
           node: {
-            url: "/broken-top-coffee.jpg",
-            altText: "Broken Top Coffee Blend",
+            url: "/whey-protein.png",
+            altText: "Phoinix Whey Protein Isolate",
             width: 500,
             height: 500,
           },
@@ -209,7 +209,7 @@ const demoProducts = [
         {
           node: {
             id: "variant-4",
-            title: "12oz Whole Bean",
+            title: "2lb Container",
             availableForSale: true,
           },
         },

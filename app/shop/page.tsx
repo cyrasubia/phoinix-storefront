@@ -218,8 +218,143 @@ const demoProducts = [
   },
   {
     id: "demo-6",
-    title: "Broken Top Coffee Blend",
-    handle: "broken-top-coffee-blend",
+    title: "Phoinix Whey Protein",
+    handle: "phoinix-whey-protein",
+    description: "Hydrolyzed whey protein isolate for lean muscle growth and recovery. 25g protein per serving with fast absorption.",
+    priceRange: {
+      minVariantPrice: {
+        amount: "45.00",
+        currencyCode: "USD",
+      },
+    },
+    images: {
+      edges: [
+        {
+          node: {
+            url: "/whey-protein.png",
+            altText: "Phoinix Whey Protein Isolate",
+            width: 500,
+            height: 500,
+          },
+        },
+      ],
+    },
+    variants: {
+      edges: [{ node: { id: "variant-6", title: "2lb Container", availableForSale: true } }],
+    },
+  },
+  {
+    id: "demo-7",
+    title: "Organic Beetroot Powder",
+    handle: "organic-beetroot-powder",
+    description: "Nitric oxide booster for enhanced blood flow and exercise performance. Natural energy and endurance support.",
+    priceRange: {
+      minVariantPrice: {
+        amount: "26.00",
+        currencyCode: "USD",
+      },
+    },
+    images: {
+      edges: [
+        {
+          node: {
+            url: "/beetroot.jpg",
+            altText: "Organic Beetroot Powder",
+            width: 500,
+            height: 500,
+          },
+        },
+      ],
+    },
+    variants: {
+      edges: [{ node: { id: "variant-7", title: "30 Servings", availableForSale: true } }],
+    },
+  },
+  {
+    id: "demo-8",
+    title: "Mushroom Complex",
+    handle: "mushroom-complex",
+    description: "Powerful blend of Lion's Mane, Reishi, and Cordyceps. Supports cognitive function, immunity, and stress response.",
+    priceRange: {
+      minVariantPrice: {
+        amount: "34.99",
+        currencyCode: "USD",
+      },
+    },
+    images: {
+      edges: [
+        {
+          node: {
+            url: "/mushroom-complex.png",
+            altText: "Mushroom Complex Supplement",
+            width: 500,
+            height: 500,
+          },
+        },
+      ],
+    },
+    variants: {
+      edges: [{ node: { id: "variant-8", title: "60 Capsules", availableForSale: true } }],
+    },
+  },
+  {
+    id: "demo-9",
+    title: "Creatine Monohydrate",
+    handle: "creatine-monohydrate",
+    description: "Pure micronized creatine for strength and power. Supports muscle growth, recovery, and high-intensity performance.",
+    priceRange: {
+      minVariantPrice: {
+        amount: "22.00",
+        currencyCode: "USD",
+      },
+    },
+    images: {
+      edges: [
+        {
+          node: {
+            url: "/creatine.png",
+            altText: "Creatine Monohydrate",
+            width: 500,
+            height: 500,
+          },
+        },
+      ],
+    },
+    variants: {
+      edges: [{ node: { id: "variant-9", title: "300g", availableForSale: true } }],
+    },
+  },
+  {
+    id: "demo-10",
+    title: "Pre-Workout",
+    handle: "pre-workout",
+    description: "Clean energy and focus without the crash. Enhances endurance, pump, and mental clarity for peak performance.",
+    priceRange: {
+      minVariantPrice: {
+        amount: "35.00",
+        currencyCode: "USD",
+      },
+    },
+    images: {
+      edges: [
+        {
+          node: {
+            url: "/pre-workout.png",
+            altText: "Pre-Workout Supplement",
+            width: 500,
+            height: 500,
+          },
+        },
+      ],
+    },
+    variants: {
+      edges: [{ node: { id: "variant-10", title: "30 Servings", availableForSale: true } }],
+    },
+  },
+  {
+    id: "demo-11",
+    title: "Broken Top Coffee",
+    handle: "broken-top-coffee",
     description: "Medium roast with chocolate-covered almonds, maple syrup, and citrus notes. SCA Specialty Grade, small-batch roasted in the USA.",
     priceRange: {
       minVariantPrice: {
@@ -240,11 +375,11 @@ const demoProducts = [
       ],
     },
     variants: {
-      edges: [{ node: { id: "variant-6", title: "12oz Whole Bean", availableForSale: true } }],
+      edges: [{ node: { id: "variant-11", title: "12oz Whole Bean", availableForSale: true } }],
     },
   },
   {
-    id: "demo-7",
+    id: "demo-12",
     title: "Flathead Valley Coffee",
     handle: "flathead-valley-coffee",
     description: "Medium-dark roast with bakers chocolate, caramelized sugar, and warm spice. Bold wake-up routine coffee.",
@@ -267,13 +402,13 @@ const demoProducts = [
       ],
     },
     variants: {
-      edges: [{ node: { id: "variant-7", title: "12oz Whole Bean", availableForSale: true } }],
+      edges: [{ node: { id: "variant-12", title: "12oz Whole Bean", availableForSale: true } }],
     },
   },
   {
-    id: "demo-8",
-    title: "Rock Creek Coffee Blend",
-    handle: "rock-creek-coffee-blend",
+    id: "demo-13",
+    title: "Rock Creek Coffee",
+    handle: "rock-creek-coffee",
     description: "Medium roast with toffee, dark chocolate, and citrus balance. The Citrus + Chocolate hero for balanced energy rituals.",
     priceRange: {
       minVariantPrice: {
@@ -294,7 +429,7 @@ const demoProducts = [
       ],
     },
     variants: {
-      edges: [{ node: { id: "variant-8", title: "12oz Whole Bean", availableForSale: true } }],
+      edges: [{ node: { id: "variant-13", title: "12oz Whole Bean", availableForSale: true } }],
     },
   },
 ];
