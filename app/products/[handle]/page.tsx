@@ -32,6 +32,22 @@ const demoProducts: Record<string, any> = {
             height: 500,
           },
         },
+        {
+          node: {
+            url: "/products/coq10-nutrition-facts.jpg",
+            altText: "Nutrition Facts",
+            width: 500,
+            height: 500,
+          },
+        },
+        {
+          node: {
+            url: "/products/coq10-supplement-facts.jpg",
+            altText: "Supplement Facts",
+            width: 500,
+            height: 500,
+          },
+        },
       ],
     },
     variants: {
@@ -68,6 +84,22 @@ const demoProducts: Record<string, any> = {
           node: {
             url: "/omega3.jpg",
             altText: "Omega-3 Fish Oil Supplement",
+            width: 500,
+            height: 500,
+          },
+        },
+        {
+          node: {
+            url: "/products/omega3-nutrition-facts.jpg",
+            altText: "Nutrition Facts",
+            width: 500,
+            height: 500,
+          },
+        },
+        {
+          node: {
+            url: "/products/omega3-supplement-facts.jpg",
+            altText: "Supplement Facts",
             width: 500,
             height: 500,
           },
@@ -112,6 +144,14 @@ const demoProducts: Record<string, any> = {
             height: 500,
           },
         },
+        {
+          node: {
+            url: "/products/5htp-supplement-facts.jpg",
+            altText: "Supplement Facts",
+            width: 500,
+            height: 500,
+          },
+        },
       ],
     },
     variants: {
@@ -148,6 +188,22 @@ const demoProducts: Record<string, any> = {
           node: {
             url: "/probiotics.jpg",
             altText: "Probiotics Supplement",
+            width: 500,
+            height: 500,
+          },
+        },
+        {
+          node: {
+            url: "/products/probiotics-nutrition-facts.jpg",
+            altText: "Nutrition Facts",
+            width: 500,
+            height: 500,
+          },
+        },
+        {
+          node: {
+            url: "/products/probiotics-supplement-facts.jpg",
+            altText: "Supplement Facts",
             width: 500,
             height: 500,
           },
@@ -192,6 +248,14 @@ const demoProducts: Record<string, any> = {
             height: 500,
           },
         },
+        {
+          node: {
+            url: "/products/sea-moss-supplement-facts.jpg",
+            altText: "Supplement Facts",
+            width: 500,
+            height: 500,
+          },
+        },
       ],
     },
     variants: {
@@ -228,6 +292,14 @@ const demoProducts: Record<string, any> = {
           node: {
             url: "/whey-protein.png",
             altText: "Phoinix Whey Protein Isolate",
+            width: 500,
+            height: 500,
+          },
+        },
+        {
+          node: {
+            url: "/products/whey-protein-nutrition-facts.png",
+            altText: "Nutrition Facts",
             width: 500,
             height: 500,
           },
@@ -272,6 +344,14 @@ const demoProducts: Record<string, any> = {
             height: 500,
           },
         },
+        {
+          node: {
+            url: "/products/beetroot-supplement-facts.jpg",
+            altText: "Supplement Facts",
+            width: 500,
+            height: 500,
+          },
+        },
       ],
     },
     variants: {
@@ -308,6 +388,14 @@ const demoProducts: Record<string, any> = {
           node: {
             url: "/mushroom-complex.png",
             altText: "Mushroom Complex Supplement",
+            width: 500,
+            height: 500,
+          },
+        },
+        {
+          node: {
+            url: "/products/mushroom-complex-supplement-facts.png",
+            altText: "Supplement Facts",
             width: 500,
             height: 500,
           },
@@ -352,6 +440,22 @@ const demoProducts: Record<string, any> = {
             height: 500,
           },
         },
+        {
+          node: {
+            url: "/products/creatine-nutrition-facts.png",
+            altText: "Nutrition Facts",
+            width: 500,
+            height: 500,
+          },
+        },
+        {
+          node: {
+            url: "/products/creatine-supplement-facts.png",
+            altText: "Supplement Facts",
+            width: 500,
+            height: 500,
+          },
+        },
       ],
     },
     variants: {
@@ -388,6 +492,22 @@ const demoProducts: Record<string, any> = {
           node: {
             url: "/pre-workout.png",
             altText: "Pre-Workout Supplement",
+            width: 500,
+            height: 500,
+          },
+        },
+        {
+          node: {
+            url: "/products/pre-workout-nutrition-facts.png",
+            altText: "Nutrition Facts",
+            width: 500,
+            height: 500,
+          },
+        },
+        {
+          node: {
+            url: "/products/pre-workout-supplement-facts.png",
+            altText: "Supplement Facts",
             width: 500,
             height: 500,
           },
@@ -432,6 +552,14 @@ const demoProducts: Record<string, any> = {
             height: 500,
           },
         },
+        {
+          node: {
+            url: "/products/broken-top-info.jpg",
+            altText: "Coffee Information",
+            width: 500,
+            height: 500,
+          },
+        },
       ],
     },
     variants: {
@@ -472,6 +600,14 @@ const demoProducts: Record<string, any> = {
             height: 500,
           },
         },
+        {
+          node: {
+            url: "/products/flathead-valley-info.jpg",
+            altText: "Coffee Information",
+            width: 500,
+            height: 500,
+          },
+        },
       ],
     },
     variants: {
@@ -508,6 +644,14 @@ const demoProducts: Record<string, any> = {
           node: {
             url: "/rock-creek-coffee.jpg",
             altText: "Rock Creek Coffee Blend",
+            width: 500,
+            height: 500,
+          },
+        },
+        {
+          node: {
+            url: "/products/rock-creek-info.jpg",
+            altText: "Coffee Information",
             width: 500,
             height: 500,
           },
