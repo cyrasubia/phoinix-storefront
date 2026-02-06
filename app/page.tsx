@@ -55,9 +55,7 @@ export default function Home() {
         <Testimonials />
         
         {/* CTA Section */}
-        <section className="py-20 sm:py-28 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-teal-600" />
-          
+        <section className="py-16 sm:py-20 lg:py-28 relative overflow-hidden bg-gradient-to-br from-red-700 via-red-800 to-red-900">
           {/* Pattern overlay */}
           <div className="absolute inset-0 opacity-10">
             <div 
@@ -73,17 +71,17 @@ export default function Home() {
           <div className="absolute bottom-10 right-10 w-48 h-48 bg-white/10 rounded-full blur-2xl" />
 
           <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
               Ready to Transform Your Wellness?
             </h2>
-            <p className="text-lg sm:text-xl text-emerald-100 mb-10 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-red-100 mb-8 sm:mb-10 max-w-2xl mx-auto">
               Join thousands of customers who have made Phoinix part of their daily wellness routine. 
               Start your journey today.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <a
                 href="/shop"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-emerald-600 font-bold text-lg shadow-xl hover:bg-emerald-50 hover:scale-105 transition-all duration-300 btn-shine"
+                className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-white text-red-700 font-bold text-base sm:text-lg shadow-xl hover:bg-red-50 hover:scale-105 transition-all duration-300 btn-shine"
               >
                 Shop Now
                 <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -92,28 +90,28 @@ export default function Home() {
               </a>
               <a
                 href="/about"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border-2 border-white/30 text-white font-semibold text-lg hover:bg-white/10 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full border-2 border-white/30 text-white font-semibold text-base sm:text-lg hover:bg-white/10 transition-all duration-300"
               >
                 Learn More
               </a>
             </div>
             
             {/* Trust badges */}
-            <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-sm text-emerald-100">
-              <span className="flex items-center gap-2">
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+            <div className="mt-10 sm:mt-12 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm text-red-100">
+              <span className="flex items-center gap-1.5 sm:gap-2">
+                <svg className="h-4 w-4 sm:h-5 sm:w-5" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
                 Free Shipping Over $50
               </span>
-              <span className="flex items-center gap-2">
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <span className="flex items-center gap-1.5 sm:gap-2">
+                <svg className="h-4 w-4 sm:h-5 sm:w-5" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
                 30-Day Guarantee
               </span>
-              <span className="flex items-center gap-2">
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <span className="flex items-center gap-1.5 sm:gap-2">
+                <svg className="h-4 w-4 sm:h-5 sm:w-5" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
                 Cancel Anytime

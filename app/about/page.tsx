@@ -124,7 +124,7 @@ export default function AboutPage() {
                       description: "Orders ship within 24 hours. Free shipping on orders over $50.",
                     },
                   ].map((feature, index) => (
-                    <div key={index} className="flex items-start gap-3 sm:gap-4">
+                    <div key={index} className="flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-4 text-center sm:text-left">
                       <div className="h-8 w-8 sm:h-10 sm:w-10 rounded-lg bg-red-950 flex items-center justify-center flex-shrink-0">
                         <feature.icon className="h-4 w-4 sm:h-5 sm:w-5 text-red-500" />
                       </div>
