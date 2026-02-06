@@ -120,8 +120,8 @@ export default function Hero() {
               {/* Main product image */}
               <div className="relative w-56 h-72 sm:w-72 sm:h-96 lg:w-80 lg:h-[450px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl shadow-red-600/20 bg-neutral-900 mx-auto border border-neutral-800">
                 <Image
-                  src="/whey-protein.png"
-                  alt="Phoinix Whey Protein"
+                  src="/flathead-valley-coffee.jpg"
+                  alt="Flathead Valley Coffee"
                   fill
                   className="object-cover"
                   sizes="(max-width: 640px) 224px, (max-width: 1024px) 288px, 320px"
@@ -133,12 +133,12 @@ export default function Hero() {
                 {/* Product info overlay */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
                   <div className="bg-neutral-900/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-neutral-700">
-                    <h3 className="text-sm sm:text-base font-bold text-white mb-0.5 sm:mb-1">Phoinix Whey Protein</h3>
-                    <p className="text-neutral-400 text-xs sm:text-sm mb-2 sm:mb-3">25g Protein • Fast Absorption</p>
+                    <h3 className="text-sm sm:text-base font-bold text-white mb-0.5 sm:mb-1">Flathead Valley Coffee</h3>
+                    <p className="text-neutral-400 text-xs sm:text-sm mb-2 sm:mb-3">Medium-Dark Roast • 12oz</p>
                     <div className="flex items-center justify-between">
-                      <span className="text-lg sm:text-xl font-bold text-white">$45.00</span>
+                      <span className="text-lg sm:text-xl font-bold text-white">$18.00</span>
                       <Link 
-                        href="/products/phoinix-whey-protein"
+                        href="/products/flathead-valley-coffee"
                         className="px-3 sm:px-4 py-1.5 sm:py-2 bg-red-600 hover:bg-red-500 text-white text-xs sm:text-sm font-semibold rounded-full transition-colors"
                       >
                         Shop Now
