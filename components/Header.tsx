@@ -22,26 +22,15 @@ export default function Header() {
           <Link href="/" className="group flex items-center gap-3">
             {/* Logo Icon */}
             <div className="relative">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-red-600 to-red-800 shadow-lg shadow-red-600/20 transition-all duration-300 group-hover:shadow-red-600/40 group-hover:scale-105">
-                <svg
-                  className="h-6 w-6 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2.5}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 8v4l3 3"
-                    className="opacity-80"
-                  />
-                </svg>
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-red-600 to-red-800 shadow-lg shadow-red-600/20 transition-all duration-300 group-hover:shadow-red-600/40 group-hover:scale-105 overflow-hidden">
+                <Image
+                  src="/white-phoinix-logo.png"
+                  alt="Phoinix"
+                  width={40}
+                  height={40}
+                  className="h-8 w-8 object-contain"
+                  priority
+                />
               </div>
               {/* Glow effect */}
               <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-red-500 to-red-700 opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-50" />
