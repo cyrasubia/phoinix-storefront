@@ -61,7 +61,7 @@ export default async function FeaturedProducts() {
             asChild
             variant="outline"
             size="lg"
-            className="border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900 font-semibold px-8 text-neutral-300"
+            className="border-2 border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900 font-semibold px-8 text-neutral-300"
           >
             <Link href="/shop" className="flex items-center gap-2">
               View All Products

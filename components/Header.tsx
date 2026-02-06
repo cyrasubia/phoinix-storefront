@@ -6,6 +6,7 @@ import { ShoppingBag, Menu, X, Minus, Plus, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -14,20 +15,20 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-neutral-950 border-b border-neutral-900">
+    <header className="sticky top-0 z-50 glass border-b border-red-900/20">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <div className="flex items-center">
           <Link href="/" className="group flex items-center gap-3">
             {/* Logo Icon */}
             <div className="relative">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-neutral-900 border border-neutral-800 transition-all duration-300 group-hover:border-neutral-700">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-red-600 to-red-800 shadow-lg shadow-red-600/20 transition-all duration-300 group-hover:shadow-red-600/40 group-hover:scale-105">
                 <svg
                   className="h-6 w-6 text-white"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  strokeWidth={2}
+                  strokeWidth={2.5}
                 >
                   <path
                     strokeLinecap="round"
@@ -42,11 +43,13 @@ export default function Header() {
                   />
                 </svg>
               </div>
+              {/* Glow effect */}
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-red-500 to-red-700 opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-50" />
             </div>
 
             {/* Brand Name */}
             <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-tight text-white">
+              <span className="text-xl font-bold tracking-tight text-gradient">
                 Phoinix
               </span>
               <span className="text-[10px] uppercase tracking-widest text-neutral-500 -mt-1">
@@ -92,20 +95,20 @@ export default function Header() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="relative hover:bg-neutral-900 transition-colors"
+                className="relative hover:bg-red-950/30 transition-colors"
               >
                 <ShoppingBag className="h-5 w-5 text-neutral-400" />
                 {totalItems > 0 && (
-                  <Badge className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0 bg-red-600 text-white text-xs font-bold border-2 border-neutral-950">
+                  <Badge className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0 bg-red-600 text-white text-xs font-bold border-2 border-neutral-900">
                     {totalItems}
                   </Badge>
                 )}
               </Button>
             </SheetTrigger>
-            <SheetContent className="w-full sm:max-w-lg flex flex-col bg-neutral-950 border-neutral-900">
+            <SheetContent className="w-full sm:max-w-lg flex flex-col bg-neutral-900 border-neutral-800">
               <SheetHeader>
                 <SheetTitle className="flex items-center gap-2 text-lg font-bold text-white">
-                  <ShoppingBag className="h-5 w-5 text-neutral-400" />
+                  <ShoppingBag className="h-5 w-5 text-red-600" />
                   Your Cart ({totalItems})
                 </SheetTitle>
               </SheetHeader>
@@ -113,7 +116,7 @@ export default function Header() {
               <div className="flex-1 overflow-y-auto py-6">
                 {items.length === 0 ? (
                   <div className="flex flex-col items-center justify-center h-full text-center space-y-4">
-                    <div className="w-20 h-20 rounded-full bg-neutral-900 flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-full bg-neutral-800 flex items-center justify-center">
                       <ShoppingBag className="h-10 w-10 text-neutral-600" />
                     </div>
                     <div>
@@ -122,7 +125,7 @@ export default function Header() {
                     </div>
                     <Button
                       onClick={() => setIsOpen(false)}
-                      className="bg-red-600 hover:bg-red-500 text-white"
+                      className="bg-gradient-to-r from-red-600 to-red-800 hover:from-red-500 hover:to-red-700 text-white"
                       asChild
                     >
                       <Link href="/shop">Continue Shopping</Link>
@@ -133,9 +136,9 @@ export default function Header() {
                     {items.map((item) => (
                       <div
                         key={item.id}
-                        className="flex gap-4 p-4 rounded-xl bg-neutral-900 border border-neutral-800"
+                        className="flex gap-4 p-4 rounded-xl bg-neutral-800 border border-neutral-700"
                       >
-                        <div className="relative h-20 w-20 rounded-lg overflow-hidden bg-neutral-950 flex-shrink-0">
+                        <div className="relative h-20 w-20 rounded-lg overflow-hidden bg-neutral-900 flex-shrink-0">
                           {item.image ? (
                             <Image
                               src={item.image}
@@ -144,8 +147,8 @@ export default function Header() {
                               className="object-cover"
                             />
                           ) : (
-                            <div className="w-full h-full bg-neutral-800 flex items-center justify-center">
-                              <ShoppingBag className="h-8 w-8 text-neutral-600" />
+                            <div className="w-full h-full bg-gradient-to-br from-red-900 to-neutral-900 flex items-center justify-center">
+                              <ShoppingBag className="h-8 w-8 text-red-500" />
                             </div>
                           )}
                         </div>
@@ -164,7 +167,7 @@ export default function Header() {
                             <Button
                               variant="outline"
                               size="icon"
-                              className="h-7 w-7 border-neutral-800 bg-neutral-900"
+                              className="h-7 w-7 border-neutral-700 bg-neutral-800"
                               onClick={() => updateQuantity(item.id, item.quantity - 1)}
                             >
                               <Minus className="h-3 w-3 text-neutral-400" />
@@ -175,7 +178,7 @@ export default function Header() {
                             <Button
                               variant="outline"
                               size="icon"
-                              className="h-7 w-7 border-neutral-800 bg-neutral-900"
+                              className="h-7 w-7 border-neutral-700 bg-neutral-800"
                               onClick={() => updateQuantity(item.id, item.quantity + 1)}
                             >
                               <Plus className="h-3 w-3 text-neutral-400" />
@@ -197,16 +200,16 @@ export default function Header() {
               </div>
 
               {items.length > 0 && (
-                <div className="border-t border-neutral-900 pt-6 space-y-4">
+                <div className="border-t border-neutral-800 pt-6 space-y-4">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-neutral-400">Subtotal</span>
                     <span className="font-medium text-white">${totalPrice.toFixed(2)}</span>
                   </div>
                   <div className="flex items-center justify-between text-lg font-bold">
                     <span className="text-white">Total</span>
-                    <span className="text-white">${totalPrice.toFixed(2)}</span>
+                    <span className="text-red-500">${totalPrice.toFixed(2)}</span>
                   </div>
-                  <Button className="w-full bg-red-600 hover:bg-red-500 text-white font-semibold py-6">
+                  <Button className="w-full bg-gradient-to-r from-red-600 to-red-800 hover:from-red-500 hover:to-red-700 text-white font-semibold py-6 btn-shine">
                     Checkout
                   </Button>
                   <p className="text-xs text-center text-neutral-500">
@@ -224,9 +227,9 @@ export default function Header() {
                 <Menu className="h-5 w-5 text-neutral-400" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-full sm:max-w-sm bg-neutral-950 border-neutral-900">
+            <SheetContent side="right" className="w-full sm:max-w-sm bg-neutral-900 border-neutral-800">
               <SheetHeader>
-                <SheetTitle className="text-white">Menu</SheetTitle>
+                <SheetTitle className="text-gradient">Menu</SheetTitle>
               </SheetHeader>
               <nav className="flex flex-col gap-2 mt-8">
                 {[
@@ -238,7 +241,7 @@ export default function Header() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="text-lg font-medium text-neutral-300 hover:text-white py-3 px-4 rounded-lg hover:bg-neutral-900 transition-colors"
+                    className="text-lg font-medium text-neutral-300 hover:text-red-500 py-3 px-4 rounded-lg hover:bg-neutral-800 transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.label}
