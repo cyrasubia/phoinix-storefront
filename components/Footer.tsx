@@ -22,9 +22,9 @@ export default function Footer() {
               <Input
                 type="email"
                 placeholder="Enter your email"
-                className="bg-neutral-900 border-neutral-800 text-white placeholder:text-neutral-500 focus:border-red-600"
+                className="bg-neutral-900 border-neutral-800 text-white placeholder:text-neutral-600 focus:border-neutral-700"
               />
-              <Button className="bg-gradient-to-r from-red-600 to-red-800 hover:from-red-500 hover:to-red-700 text-white px-6">
+              <Button className="bg-red-600 hover:bg-red-500 text-white px-6 whitespace-nowrap">
                 Subscribe
                 <ArrowRight className="h-4 w-4 ml-2" />
               </Button>
@@ -39,7 +39,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-red-600 to-red-800">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-neutral-900 border border-neutral-800">
                 <svg
                   className="h-5 w-5 text-white"
                   fill="none"
@@ -56,18 +56,18 @@ export default function Footer() {
               </div>
               <span className="text-lg font-bold text-white">Phoinix</span>
             </div>
-            <p className="text-sm text-neutral-400 leading-relaxed">
+            <p className="text-sm text-neutral-500 leading-relaxed">
               Premium supplements and specialty coffee crafted for your transformation journey.
             </p>
             {/* Social Links */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               {[Instagram, Twitter, Facebook, Youtube].map((Icon, index) => (
                 <a
                   key={index}
                   href="#"
-                  className="h-10 w-10 rounded-full bg-neutral-900 flex items-center justify-center text-neutral-400 hover:bg-red-950 hover:text-red-500 transition-colors"
+                  className="h-9 w-9 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center text-neutral-500 hover:text-white hover:border-neutral-700 transition-colors"
                 >
-                  <Icon className="h-5 w-5" />
+                  <Icon className="h-4 w-4" />
                 </a>
               ))}
             </div>
@@ -81,7 +81,7 @@ export default function Footer() {
                 <li key={item}>
                   <Link
                     href="/shop"
-                    className="text-sm text-neutral-400 hover:text-red-500 transition-colors"
+                    className="text-sm text-neutral-500 hover:text-white transition-colors"
                   >
                     {item}
                   </Link>
@@ -98,7 +98,7 @@ export default function Footer() {
                 <li key={item}>
                   <Link
                     href="/contact"
-                    className="text-sm text-neutral-400 hover:text-red-500 transition-colors"
+                    className="text-sm text-neutral-500 hover:text-white transition-colors"
                   >
                     {item}
                   </Link>
@@ -115,7 +115,7 @@ export default function Footer() {
                 <li key={item}>
                   <Link
                     href="/about"
-                    className="text-sm text-neutral-400 hover:text-red-500 transition-colors"
+                    className="text-sm text-neutral-500 hover:text-white transition-colors"
                   >
                     {item}
                   </Link>
@@ -127,14 +127,14 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-neutral-900 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-neutral-500">
+          <p className="text-sm text-neutral-600">
             © 2026 Phoinix Transformations. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="#" className="text-sm text-neutral-500 hover:text-red-500 transition-colors">
+            <Link href="#" className="text-sm text-neutral-600 hover:text-white transition-colors">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-sm text-neutral-500 hover:text-red-500 transition-colors">
+            <Link href="#" className="text-sm text-neutral-600 hover:text-white transition-colors">
               Terms of Service
             </Link>
           </div>

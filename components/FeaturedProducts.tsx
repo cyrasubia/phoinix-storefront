@@ -12,9 +12,9 @@ export default async function FeaturedProducts() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-950/50 border border-red-900/30 mb-6">
-            <Package className="h-4 w-4 text-red-500" />
-            <span className="text-sm font-medium text-red-200">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neutral-900 border border-neutral-800 mb-6">
+            <Package className="h-4 w-4 text-neutral-400" />
+            <span className="text-sm font-medium text-neutral-300">
               Curated Selection
             </span>
           </div>
@@ -61,7 +61,7 @@ export default async function FeaturedProducts() {
             asChild
             variant="outline"
             size="lg"
-            className="border-2 border-neutral-800 hover:border-red-600 hover:bg-red-950/30 font-semibold px-8 text-neutral-300"
+            className="border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900 font-semibold px-8 text-neutral-300"
           >
             <Link href="/shop" className="flex items-center gap-2">
               View All Products
