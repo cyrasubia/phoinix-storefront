@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Instagram, Twitter, Facebook, Youtube, ArrowRight } from "lucide-react";
@@ -39,20 +40,14 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-red-600 to-red-800">
-                <svg
-                  className="h-5 w-5 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
-                  />
-                </svg>
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-red-600 to-red-800 overflow-hidden">
+                <Image
+                  src="/white-phoinix-logo.png"
+                  alt="Phoinix"
+                  width={32}
+                  height={32}
+                  className="h-6 w-6 object-contain"
+                />
               </div>
               <span className="text-lg font-bold text-white">Phoinix</span>
             </div>
