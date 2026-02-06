@@ -63,27 +63,31 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-8">
           <Link
             href="/"
-            className="text-sm font-medium text-neutral-400 hover:text-white transition-colors"
+            className="text-sm font-medium text-neutral-400 hover:text-red-500 transition-colors relative group"
           >
             Home
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-800 transition-all duration-300 group-hover:w-full" />
           </Link>
           <Link
             href="/shop"
-            className="text-sm font-medium text-neutral-400 hover:text-white transition-colors"
+            className="text-sm font-medium text-neutral-400 hover:text-red-500 transition-colors relative group"
           >
             Shop
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-800 transition-all duration-300 group-hover:w-full" />
           </Link>
           <Link
             href="/about"
-            className="text-sm font-medium text-neutral-400 hover:text-white transition-colors"
+            className="text-sm font-medium text-neutral-400 hover:text-red-500 transition-colors relative group"
           >
             About
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-800 transition-all duration-300 group-hover:w-full" />
           </Link>
           <Link
             href="/contact"
-            className="text-sm font-medium text-neutral-400 hover:text-white transition-colors"
+            className="text-sm font-medium text-neutral-400 hover:text-red-500 transition-colors relative group"
           >
             Contact
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-800 transition-all duration-300 group-hover:w-full" />
           </Link>
         </div>
 

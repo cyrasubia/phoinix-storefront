@@ -116,7 +116,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
         {/* Badges */}
         <div className="absolute top-3 left-3 flex flex-col gap-2">
-          <Badge className="bg-neutral-800 text-neutral-200 border-0 text-xs">
+          <Badge className="bg-red-600 text-white border-0">
             New
           </Badge>
         </div>
@@ -154,14 +154,14 @@ export default function ProductCard({ product }: ProductCardProps) {
           {[...Array(5)].map((_, i) => (
             <Star
               key={i}
-              className="h-3.5 w-3.5 fill-neutral-600 text-neutral-600"
+              className="h-3.5 w-3.5 fill-red-500 text-red-500"
             />
           ))}
           <span className="text-xs text-neutral-500 ml-1">(48)</span>
         </div>
 
         {/* Title */}
-        <h3 className="font-semibold text-white text-lg leading-tight mb-2 group-hover:text-neutral-300 transition-colors line-clamp-1">
+        <h3 className="font-semibold text-white text-lg leading-tight mb-2 group-hover:text-red-500 transition-colors line-clamp-1">
           {product.title}
         </h3>
 
@@ -185,7 +185,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           <Button
             size="icon"
             onClick={handleAddToCart}
-            className="h-10 w-10 rounded-full bg-neutral-800 text-neutral-400 hover:bg-red-600 hover:text-white transition-all duration-300 shadow-sm sm:hidden"
+            className="h-10 w-10 rounded-full bg-red-950 text-red-500 hover:bg-red-600 hover:text-white transition-all duration-300 shadow-sm sm:hidden"
             disabled={isAdded || !variant?.availableForSale}
           >
             {isAdded ? (

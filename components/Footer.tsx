@@ -22,9 +22,9 @@ export default function Footer() {
               <Input
                 type="email"
                 placeholder="Enter your email"
-                className="bg-neutral-900 border-neutral-800 text-white placeholder:text-neutral-500 focus:border-neutral-700"
+                className="bg-neutral-900 border-neutral-800 text-white placeholder:text-neutral-500 focus:border-red-600"
               />
-              <Button className="bg-red-600 hover:bg-red-500 text-white px-6">
+              <Button className="bg-gradient-to-r from-red-600 to-red-800 hover:from-red-500 hover:to-red-700 text-white px-6">
                 Subscribe
                 <ArrowRight className="h-4 w-4 ml-2" />
               </Button>
@@ -39,7 +39,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-neutral-900 border border-neutral-800">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-red-600 to-red-800">
                 <svg
                   className="h-5 w-5 text-white"
                   fill="none"
@@ -65,7 +65,7 @@ export default function Footer() {
                 <a
                   key={index}
                   href="#"
-                  className="h-10 w-10 rounded-full bg-neutral-900 flex items-center justify-center text-neutral-400 hover:bg-neutral-800 hover:text-white transition-colors"
+                  className="h-10 w-10 rounded-full bg-neutral-900 flex items-center justify-center text-neutral-400 hover:bg-red-950 hover:text-red-500 transition-colors"
                 >
                   <Icon className="h-5 w-5" />
                 </a>
@@ -81,7 +81,7 @@ export default function Footer() {
                 <li key={item}>
                   <Link
                     href="/shop"
-                    className="text-sm text-neutral-400 hover:text-white transition-colors"
+                    className="text-sm text-neutral-400 hover:text-red-500 transition-colors"
                   >
                     {item}
                   </Link>
@@ -98,7 +98,7 @@ export default function Footer() {
                 <li key={item}>
                   <Link
                     href="/contact"
-                    className="text-sm text-neutral-400 hover:text-white transition-colors"
+                    className="text-sm text-neutral-400 hover:text-red-500 transition-colors"
                   >
                     {item}
                   </Link>
@@ -115,7 +115,7 @@ export default function Footer() {
                 <li key={item}>
                   <Link
                     href="/about"
-                    className="text-sm text-neutral-400 hover:text-white transition-colors"
+                    className="text-sm text-neutral-400 hover:text-red-500 transition-colors"
                   >
                     {item}
                   </Link>
@@ -131,10 +131,10 @@ export default function Footer() {
             © 2026 Phoinix Transformations. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="#" className="text-sm text-neutral-500 hover:text-white transition-colors">
+            <Link href="#" className="text-sm text-neutral-500 hover:text-red-500 transition-colors">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-sm text-neutral-500 hover:text-white transition-colors">
+            <Link href="#" className="text-sm text-neutral-500 hover:text-red-500 transition-colors">
               Terms of Service
             </Link>
           </div>

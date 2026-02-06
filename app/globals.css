@@ -205,9 +205,10 @@
   animation: gradient-shift 8s ease infinite;
 }
 
-/* Gradient text utility - now just white for cleaner look */
+/* Gradient text utility */
 .text-gradient {
-  @apply text-white;
+  @apply bg-clip-text text-transparent;
+  background-image: linear-gradient(135deg, #dc2626 0%, #991b1b 50%, #dc2626 100%);
 }
 
 .text-gradient-gold {

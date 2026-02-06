@@ -36,9 +36,9 @@ export default function Hero() {
           {/* Left Content */}
           <div className="space-y-8 animate-fade-in-up">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neutral-900 border border-neutral-800">
-              <Sparkles className="h-4 w-4 text-neutral-400" />
-              <span className="text-sm font-medium text-neutral-300">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-950/50 border border-red-800/50 backdrop-blur-sm">
+              <Sparkles className="h-4 w-4 text-red-500" />
+              <span className="text-sm font-medium text-red-200">
                 Science-Backed Wellness
               </span>
             </div>
@@ -47,12 +47,12 @@ export default function Hero() {
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1]">
                 Transform Your
-                <span className="block text-white mt-2">Wellness Journey</span>
+                <span className="block text-gradient mt-2">Wellness Journey</span>
               </h1>
               <p className="text-lg sm:text-xl text-neutral-400 max-w-lg leading-relaxed">
                 Premium supplements and specialty coffee crafted for those who 
                 refuse to settle. Clean ingredients, transparent sourcing, 
-                <span className="text-white font-medium"> real results.</span>
+                <span className="text-red-500 font-medium"> real results.</span>
               </p>
             </div>
 
@@ -72,7 +72,7 @@ export default function Hero() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-2 border-neutral-700 hover:border-neutral-600 hover:bg-neutral-900 text-neutral-300 font-semibold px-8 py-6 text-base transition-all duration-300"
+                className="border-2 border-neutral-700 hover:border-red-600 hover:bg-red-950/30 text-neutral-300 font-semibold px-8 py-6 text-base transition-all duration-300"
               >
                 <Link href="/about">Learn More</Link>
               </Button>
@@ -86,8 +86,8 @@ export default function Hero() {
                   className="flex items-center gap-2 text-sm text-neutral-400"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <div className="h-8 w-8 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center">
-                    <badge.icon className="h-4 w-4 text-neutral-400" />
+                  <div className="h-8 w-8 rounded-full bg-red-950 flex items-center justify-center">
+                    <badge.icon className="h-4 w-4 text-red-500" />
                   </div>
                   <span className="font-medium">{badge.text}</span>
                 </div>
@@ -102,7 +102,7 @@ export default function Hero() {
                 { value: "4.9", label: "Rating" },
               ].map((stat) => (
                 <div key={stat.label}>
-                  <div className="text-2xl sm:text-3xl font-bold text-white">{stat.value}</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-gradient">{stat.value}</div>
                   <div className="text-sm text-neutral-500">{stat.label}</div>
                 </div>
               ))}
@@ -155,8 +155,8 @@ export default function Hero() {
               {/* Small floating badge */}
               <div className="absolute -top-4 -right-4 bg-neutral-900 border border-neutral-800 rounded-2xl shadow-xl p-4 animate-float-delayed">
                 <div className="flex items-center gap-2">
-                  <div className="h-10 w-10 rounded-full bg-neutral-800 flex items-center justify-center">
-                    <Leaf className="h-5 w-5 text-neutral-400" />
+                  <div className="h-10 w-10 rounded-full bg-red-950 flex items-center justify-center">
+                    <Leaf className="h-5 w-5 text-red-500" />
                   </div>
                   <div>
                     <p className="text-xs text-neutral-500">Organic</p>
