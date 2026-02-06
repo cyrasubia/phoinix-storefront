@@ -8,17 +8,17 @@ import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 
 export default function ContactPage() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col bg-neutral-950">
       <Header />
       
       <main className="flex-1">
         {/* Hero */}
-        <div className="bg-gradient-to-b from-emerald-50/50 to-white py-16 sm:py-20">
+        <div className="bg-gradient-to-b from-neutral-900 to-neutral-950 py-12 sm:py-16 lg:py-20">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold text-stone-900 mb-6">
+            <h1 className="text-3xl sm:text-5xl font-bold text-white mb-4 sm:mb-6">
               Get in <span className="text-gradient">Touch</span>
             </h1>
-            <p className="text-xl text-stone-600 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-base sm:text-xl text-neutral-400 leading-relaxed max-w-2xl mx-auto">
               Have questions about our products or need help with your order? 
               We're here to help you on your wellness journey.
             </p>
@@ -26,46 +26,64 @@ export default function ContactPage() {
         </div>
 
         {/* Contact Section */}
-        <div className="py-16">
+        <div className="py-12 sm:py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
               {/* Contact Form */}
-              <div className="bg-white rounded-2xl p-8 border border-stone-100 shadow-sm">
-                <h2 className="text-2xl font-bold text-stone-900 mb-6">Send us a message</h2>
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="firstName">First name</Label>
-                      <Input id="firstName" placeholder="John" />
+              <div className="bg-neutral-900 rounded-xl sm:rounded-2xl p-5 sm:p-8 border border-neutral-800">
+                <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">Send us a message</h2>
+                <form className="space-y-4 sm:space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                    <div className="space-y-1.5 sm:space-y-2">
+                      <Label htmlFor="firstName" className="text-sm text-neutral-300">First name</Label>
+                      <Input 
+                        id="firstName" 
+                        placeholder="John" 
+                        className="bg-neutral-950 border-neutral-800 text-white placeholder:text-neutral-600 focus:border-red-600"
+                      />
                     </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="lastName">Last name</Label>
-                      <Input id="lastName" placeholder="Doe" />
+                    <div className="space-y-1.5 sm:space-y-2">
+                      <Label htmlFor="lastName" className="text-sm text-neutral-300">Last name</Label>
+                      <Input 
+                        id="lastName" 
+                        placeholder="Doe" 
+                        className="bg-neutral-950 border-neutral-800 text-white placeholder:text-neutral-600 focus:border-red-600"
+                      />
                     </div>
                   </div>
                   
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" placeholder="john@example.com" />
+                  <div className="space-y-1.5 sm:space-y-2">
+                    <Label htmlFor="email" className="text-sm text-neutral-300">Email</Label>
+                    <Input 
+                      id="email" 
+                      type="email" 
+                      placeholder="john@example.com" 
+                      className="bg-neutral-950 border-neutral-800 text-white placeholder:text-neutral-600 focus:border-red-600"
+                    />
                   </div>
                   
-                  <div className="space-y-2">
-                    <Label htmlFor="subject">Subject</Label>
-                    <Input id="subject" placeholder="How can we help?" />
+                  <div className="space-y-1.5 sm:space-y-2">
+                    <Label htmlFor="subject" className="text-sm text-neutral-300">Subject</Label>
+                    <Input 
+                      id="subject" 
+                      placeholder="How can we help?" 
+                      className="bg-neutral-950 border-neutral-800 text-white placeholder:text-neutral-600 focus:border-red-600"
+                    />
                   </div>
                   
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
+                  <div className="space-y-1.5 sm:space-y-2">
+                    <Label htmlFor="message" className="text-sm text-neutral-300">Message</Label>
                     <Textarea 
                       id="message" 
                       placeholder="Tell us more about your inquiry..."
-                      rows={5}
+                      rows={4}
+                      className="bg-neutral-950 border-neutral-800 text-white placeholder:text-neutral-600 focus:border-red-600 resize-none"
                     />
                   </div>
                   
                   <Button 
                     type="submit" 
-                    className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-semibold py-6"
+                    className="w-full bg-gradient-to-r from-red-600 to-red-800 hover:from-red-500 hover:to-red-700 text-white font-semibold py-5 sm:py-6"
                   >
                     <Send className="h-4 w-4 mr-2" />
                     Send Message
@@ -74,16 +92,16 @@ export default function ContactPage() {
               </div>
 
               {/* Contact Info */}
-              <div className="space-y-8">
+              <div className="space-y-6 sm:space-y-8">
                 <div>
-                  <h2 className="text-2xl font-bold text-stone-900 mb-6">Contact Information</h2>
-                  <p className="text-stone-600 mb-8">
+                  <h2 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-6">Contact Information</h2>
+                  <p className="text-sm sm:text-base text-neutral-400 mb-6 sm:mb-8">
                     Our team is available Monday through Friday, 9am to 6pm CST. 
                     We typically respond within 24 hours.
                   </p>
                 </div>
 
-                <div className="space-y-6">
+                <div className="space-y-4 sm:space-y-6">
                   {[
                     {
                       icon: Mail,
@@ -110,26 +128,26 @@ export default function ContactPage() {
                       description: "Weekend support via email",
                     },
                   ].map((item) => (
-                    <div key={item.title} className="flex items-start gap-4">
-                      <div className="h-12 w-12 rounded-xl bg-emerald-100 flex items-center justify-center flex-shrink-0">
-                        <item.icon className="h-6 w-6 text-emerald-600" />
+                    <div key={item.title} className="flex items-start gap-3 sm:gap-4">
+                      <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-red-950 flex items-center justify-center flex-shrink-0">
+                        <item.icon className="h-5 w-5 sm:h-6 sm:w-6 text-red-500" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-stone-900">{item.title}</h3>
-                        <p className="text-stone-900">{item.content}</p>
-                        <p className="text-sm text-stone-500">{item.description}</p>
+                        <h3 className="font-semibold text-white text-sm sm:text-base">{item.title}</h3>
+                        <p className="text-white text-sm sm:text-base">{item.content}</p>
+                        <p className="text-xs sm:text-sm text-neutral-500">{item.description}</p>
                       </div>
                     </div>
                   ))}
                 </div>
 
                 {/* FAQ Link */}
-                <div className="bg-stone-50 rounded-xl p-6 border border-stone-100">
-                  <h3 className="font-semibold text-stone-900 mb-2">Looking for quick answers?</h3>
-                  <p className="text-stone-600 text-sm mb-4">
+                <div className="bg-neutral-900 rounded-xl p-5 sm:p-6 border border-neutral-800">
+                  <h3 className="font-semibold text-white mb-1.5 sm:mb-2 text-sm sm:text-base">Looking for quick answers?</h3>
+                  <p className="text-neutral-400 text-xs sm:text-sm mb-3 sm:mb-4">
                     Check our FAQ page for answers to common questions about shipping, returns, and products.
                   </p>
-                  <Button variant="outline" className="w-full">
+                  <Button variant="outline" className="w-full border-neutral-700 text-neutral-300 hover:bg-neutral-800 text-sm">
                     Visit FAQ Page
                   </Button>
                 </div>

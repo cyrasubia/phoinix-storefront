@@ -76,7 +76,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
       particleCount: 100,
       spread: 80,
       origin: { y: 0.6 },
-      colors: ["#059669", "#14b8a6", "#10b981", "#34d399"],
+      colors: ["#dc2626", "#991b1b", "#b91c1c", "#ef4444"],
     });
 
     addItem({
@@ -97,21 +97,21 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
   };
 
   return (
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
       {/* Breadcrumbs */}
-      <nav className="flex items-center gap-2 text-sm text-stone-500 mb-8">
-        <Link href="/" className="hover:text-emerald-600 transition-colors">Home</Link>
-        <ChevronRight className="h-4 w-4" />
-        <Link href="/shop" className="hover:text-emerald-600 transition-colors">Shop</Link>
-        <ChevronRight className="h-4 w-4" />
-        <span className="text-stone-900 font-medium">{product.title}</span>
+      <nav className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-neutral-500 mb-4 sm:mb-8 overflow-x-auto">
+        <Link href="/" className="hover:text-red-500 transition-colors whitespace-nowrap">Home</Link>
+        <ChevronRight className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
+        <Link href="/shop" className="hover:text-red-500 transition-colors whitespace-nowrap">Shop</Link>
+        <ChevronRight className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
+        <span className="text-white font-medium truncate">{product.title}</span>
       </nav>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12 lg:gap-16">
         {/* Image Gallery */}
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {/* Main Image */}
-          <div className="relative aspect-square rounded-2xl overflow-hidden bg-stone-100">
+          <div className="relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden bg-neutral-800">
             {images.length > 0 ? (
               <Image
                 src={images[selectedImage]?.node.url || images[0]?.node.url}
@@ -122,31 +122,31 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             ) : (
-              <div className="w-full h-full bg-gradient-to-br from-emerald-100 to-teal-100 flex items-center justify-center">
-                <ShoppingBag className="h-24 w-24 text-emerald-300" />
+              <div className="w-full h-full bg-gradient-to-br from-red-900 to-neutral-900 flex items-center justify-center">
+                <ShoppingBag className="h-16 w-16 sm:h-24 sm:w-24 text-red-500" />
               </div>
             )}
             
             {/* Badges */}
-            <div className="absolute top-4 left-4 flex flex-col gap-2">
-              <Badge className="bg-emerald-600 text-white border-0">New</Badge>
-              <Badge className="bg-white/90 text-stone-800 backdrop-blur-sm border-0">
+            <div className="absolute top-3 left-3 sm:top-4 sm:left-4 flex flex-col gap-1.5 sm:gap-2">
+              <Badge className="bg-red-600 text-white border-0 text-xs sm:text-sm">New</Badge>
+              <Badge className="bg-neutral-900/90 text-white backdrop-blur-sm border-0 text-xs sm:text-sm">
                 Best Seller
               </Badge>
             </div>
           </div>
 
-          {/* Thumbnail Gallery */}
+          {/* Thumbnail Gallery - Horizontal scroll on mobile */}
           {images.length > 1 && (
-            <div className="grid grid-cols-4 gap-3">
+            <div className="flex gap-2 sm:gap-3 overflow-x-auto pb-2 sm:grid sm:grid-cols-4">
               {images.slice(0, 4).map((image, index) => (
                 <button
                   key={index}
                   onClick={() => setSelectedImage(index)}
-                  className={`relative aspect-square rounded-xl overflow-hidden bg-stone-100 border-2 transition-all ${
+                  className={`relative aspect-square rounded-lg sm:rounded-xl overflow-hidden bg-neutral-800 border-2 flex-shrink-0 w-16 sm:w-auto transition-all ${
                     selectedImage === index
-                      ? "border-emerald-500 ring-2 ring-emerald-500/20"
-                      : "border-transparent hover:border-emerald-200"
+                      ? "border-red-500 ring-2 ring-red-500/20"
+                      : "border-transparent hover:border-neutral-700"
                   }`}
                 >
                   <Image
@@ -163,64 +163,64 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
         </div>
 
         {/* Product Info */}
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           {/* Title & Rating */}
           <div>
-            <h1 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2 sm:mb-4">
               {product.title}
             </h1>
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-1">
+            <div className="flex items-center gap-3 sm:gap-4">
+              <div className="flex items-center gap-0.5 sm:gap-1">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-amber-400 text-amber-400" />
+                  <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 fill-red-500 text-red-500" />
                 ))}
               </div>
-              <span className="text-sm text-stone-500">4.9 (127 reviews)</span>
+              <span className="text-xs sm:text-sm text-neutral-500">4.9 (127 reviews)</span>
             </div>
           </div>
 
           {/* Price */}
-          <div className="flex items-baseline gap-3">
-            <span className="text-4xl font-bold text-stone-900">
+          <div className="flex items-baseline gap-2 sm:gap-3 flex-wrap">
+            <span className="text-3xl sm:text-4xl font-bold text-white">
               ${price.toFixed(2)}
             </span>
-            <span className="text-lg text-stone-400 line-through">
+            <span className="text-base sm:text-lg text-neutral-500 line-through">
               ${(price * 1.2).toFixed(2)}
             </span>
-            <Badge className="bg-emerald-100 text-emerald-700 border-0">
+            <Badge className="bg-red-950 text-red-400 border-0 text-xs sm:text-sm">
               Save 20%
             </Badge>
           </div>
 
-          <Separator />
+          <Separator className="bg-neutral-800" />
 
           {/* Description */}
-          <div className="prose prose-stone max-w-none">
-            <p className="text-stone-600 leading-relaxed text-lg">
+          <div className="prose prose-invert max-w-none">
+            <p className="text-neutral-400 leading-relaxed text-sm sm:text-base">
               {product.description}
             </p>
           </div>
 
           {/* Quantity Selector */}
-          <div className="flex items-center gap-4">
-            <span className="text-sm font-medium text-stone-700">Quantity:</span>
-            <div className="flex items-center border border-stone-200 rounded-lg">
+          <div className="flex items-center gap-3 sm:gap-4">
+            <span className="text-xs sm:text-sm font-medium text-white">Quantity:</span>
+            <div className="flex items-center border border-neutral-700 rounded-lg bg-neutral-900">
               <Button
                 variant="ghost"
                 size="icon"
-                className="h-10 w-10 rounded-r-none"
+                className="h-9 w-9 sm:h-10 sm:w-10 rounded-r-none text-neutral-400 hover:text-white hover:bg-neutral-800"
                 onClick={() => setQuantity(Math.max(1, quantity - 1))}
               >
-                <Minus className="h-4 w-4" />
+                <Minus className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
               </Button>
-              <span className="w-12 text-center font-medium">{quantity}</span>
+              <span className="w-10 sm:w-12 text-center font-medium text-white text-sm sm:text-base">{quantity}</span>
               <Button
                 variant="ghost"
                 size="icon"
-                className="h-10 w-10 rounded-l-none"
+                className="h-9 w-9 sm:h-10 sm:w-10 rounded-l-none text-neutral-400 hover:text-white hover:bg-neutral-800"
                 onClick={() => setQuantity(quantity + 1)}
               >
-                <Plus className="h-4 w-4" />
+                <Plus className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
               </Button>
             </div>
           </div>
@@ -229,47 +229,47 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
           <Button
             onClick={handleAddToCart}
             disabled={isAdded || !variant?.availableForSale}
-            className={`w-full py-7 text-lg font-semibold btn-shine transition-all duration-300 ${
+            className={`w-full py-5 sm:py-7 text-base sm:text-lg font-semibold btn-shine transition-all duration-300 ${
               isAdded
-                ? "bg-emerald-600 hover:bg-emerald-600"
-                : "bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500"
+                ? "bg-red-600 hover:bg-red-600"
+                : "bg-gradient-to-r from-red-600 to-red-800 hover:from-red-500 hover:to-red-700"
             }`}
           >
             {isAdded ? (
               <>
-                <Check className="h-5 w-5 mr-2" />
+                <Check className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
                 Added to Cart!
               </>
             ) : (
               <>
-                <ShoppingBag className="h-5 w-5 mr-2" />
+                <ShoppingBag className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
                 Add to Cart — ${(price * quantity).toFixed(2)}
               </>
             )}
           </Button>
 
           {/* Trust Badges */}
-          <div className="grid grid-cols-3 gap-4 pt-4">
+          <div className="grid grid-cols-3 gap-2 sm:gap-4 pt-2 sm:pt-4">
             {[
               { icon: ShieldCheck, text: "Secure Checkout" },
               { icon: Truck, text: "Free Shipping $50+" },
               { icon: RotateCcw, text: "30-Day Returns" },
             ].map((badge) => (
-              <div key={badge.text} className="flex flex-col items-center text-center gap-2">
-                <div className="h-10 w-10 rounded-full bg-emerald-100 flex items-center justify-center">
-                  <badge.icon className="h-5 w-5 text-emerald-600" />
+              <div key={badge.text} className="flex flex-col items-center text-center gap-1.5 sm:gap-2">
+                <div className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-red-950 flex items-center justify-center">
+                  <badge.icon className="h-4 w-4 sm:h-5 sm:w-5 text-red-500" />
                 </div>
-                <span className="text-xs text-stone-600 font-medium">{badge.text}</span>
+                <span className="text-[10px] sm:text-xs text-neutral-400 font-medium">{badge.text}</span>
               </div>
             ))}
           </div>
 
-          <Separator />
+          <Separator className="bg-neutral-800" />
 
           {/* Product Highlights */}
           <div>
-            <h3 className="font-semibold text-stone-900 mb-4">Product Highlights</h3>
-            <ul className="space-y-3">
+            <h3 className="font-semibold text-white mb-3 sm:mb-4 text-sm sm:text-base">Product Highlights</h3>
+            <ul className="space-y-2 sm:space-y-3">
               {[
                 "Science-backed formulation with clinically studied ingredients",
                 "Third-party tested for purity and potency",
@@ -277,9 +277,9 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
                 "Sustainably sourced with eco-friendly packaging",
                 "Manufactured in FDA-registered, GMP-certified facility",
               ].map((highlight, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-stone-600">{highlight}</span>
+                <li key={index} className="flex items-start gap-2 sm:gap-3">
+                  <Check className="h-4 w-4 sm:h-5 sm:w-5 text-red-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-neutral-400 text-xs sm:text-sm">{highlight}</span>
                 </li>
               ))}
             </ul>

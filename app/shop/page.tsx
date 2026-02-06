@@ -9,24 +9,24 @@ export default async function ShopPage() {
   const products = await getProducts();
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col bg-neutral-950">
       <Header />
       
       <main className="flex-1">
         {/* Page Header */}
-        <div className="bg-gradient-to-b from-emerald-50/50 to-white py-16 sm:py-20">
+        <div className="bg-gradient-to-b from-neutral-900 to-neutral-950 py-12 sm:py-16 lg:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100/80 border border-emerald-200 mb-6">
-                <Package className="h-4 w-4 text-emerald-600" />
-                <span className="text-sm font-medium text-emerald-800">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-red-950/50 border border-red-900/30 mb-4 sm:mb-6">
+                <Package className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-red-500" />
+                <span className="text-xs sm:text-sm font-medium text-red-200">
                   All Products
                 </span>
               </div>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-900 mb-6">
+              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-6">
                 Shop Our Collection
               </h1>
-              <p className="text-lg text-stone-600 leading-relaxed">
+              <p className="text-sm sm:text-lg text-neutral-400 leading-relaxed">
                 Discover premium supplements and specialty coffee crafted for your wellness journey.
               </p>
             </div>
@@ -34,23 +34,23 @@ export default async function ShopPage() {
         </div>
 
         {/* Filters & Products */}
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           {/* Filter Bar */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8 pb-8 border-b border-stone-200">
-            <p className="text-sm text-stone-500">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 mb-6 sm:mb-8 pb-6 sm:pb-8 border-b border-neutral-800">
+            <p className="text-xs sm:text-sm text-neutral-500">
               Showing {products.length > 0 ? products.length : demoProducts.length} products
             </p>
-            <div className="flex items-center gap-4">
-              <Button variant="outline" size="sm" className="gap-2">
-                <Filter className="h-4 w-4" />
+            <div className="flex items-center gap-2 sm:gap-4">
+              <Button variant="outline" size="sm" className="gap-1.5 sm:gap-2 border-neutral-700 text-neutral-300 hover:bg-neutral-900 text-xs sm:text-sm">
+                <Filter className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                 Filter
               </Button>
-              <div className="flex items-center gap-1 border rounded-lg p-1">
-                <Button variant="ghost" size="icon" className="h-8 w-8 bg-stone-100">
-                  <Grid3X3 className="h-4 w-4" />
+              <div className="hidden sm:flex items-center gap-1 border border-neutral-700 rounded-lg p-1">
+                <Button variant="ghost" size="icon" className="h-7 w-7 sm:h-8 sm:w-8 bg-neutral-800">
+                  <Grid3X3 className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                 </Button>
-                <Button variant="ghost" size="icon" className="h-8 w-8">
-                  <List className="h-4 w-4" />
+                <Button variant="ghost" size="icon" className="h-7 w-7 sm:h-8 sm:w-8 text-neutral-400">
+                  <List className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                 </Button>
               </div>
             </div>
@@ -58,14 +58,14 @@ export default async function ShopPage() {
 
           {/* Products Grid */}
           {products.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               {products.map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))}
             </div>
           ) : (
             /* Demo Products */
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               {demoProducts.map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))}
