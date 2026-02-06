@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Shield, Leaf, Zap } from "lucide-react";
 
@@ -116,40 +117,35 @@ export default function Hero() {
             
             {/* Floating product cards */}
             <div className="relative z-10 animate-float">
-              {/* Main product image placeholder with gradient */}
-              <div className="relative w-56 h-72 sm:w-72 sm:h-96 lg:w-80 lg:h-[450px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl shadow-red-600/20 bg-gradient-to-br from-red-600 to-red-900 mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6 sm:p-8 text-center">
-                  <div className="w-16 h-16 sm:w-24 sm:h-24 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center mb-4 sm:mb-6">
-                    <svg
-                      className="h-8 w-8 sm:h-12 sm:w-12 text-white"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
-                      />
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M12 8v4l3 3"
-                      />
-                    </svg>
-                  </div>
-                  <h3 className="text-lg sm:text-2xl font-bold mb-1 sm:mb-2">Phoinix Rise</h3>
-                  <p className="text-white/80 text-xs sm:text-sm">Premium Morning Blend</p>
-                  <div className="mt-4 sm:mt-6 px-4 sm:px-6 py-2 sm:py-3 bg-white/10 backdrop-blur-sm rounded-full text-xs sm:text-sm font-semibold">
-                    Shop Collection →
+              {/* Main product image */}
+              <div className="relative w-56 h-72 sm:w-72 sm:h-96 lg:w-80 lg:h-[450px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl shadow-red-600/20 bg-neutral-900 mx-auto border border-neutral-800">
+                <Image
+                  src="/whey-protein.png"
+                  alt="Phoinix Whey Protein"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 224px, (max-width: 1024px) 288px, 320px"
+                  priority
+                />
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                
+                {/* Product info overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
+                  <div className="bg-neutral-900/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-neutral-700">
+                    <h3 className="text-sm sm:text-base font-bold text-white mb-0.5 sm:mb-1">Phoinix Whey Protein</h3>
+                    <p className="text-neutral-400 text-xs sm:text-sm mb-2 sm:mb-3">25g Protein • Fast Absorption</p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-lg sm:text-xl font-bold text-white">$45.00</span>
+                      <Link 
+                        href="/products/phoinix-whey-protein"
+                        className="px-3 sm:px-4 py-1.5 sm:py-2 bg-red-600 hover:bg-red-500 text-white text-xs sm:text-sm font-semibold rounded-full transition-colors"
+                      >
+                        Shop Now
+                      </Link>
+                    </div>
                   </div>
                 </div>
-                
-                {/* Decorative elements on card */}
-                <div className="absolute top-3 right-3 sm:top-4 sm:right-4 w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-white/10 blur-xl" />
-                <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 w-10 h-10 sm:w-16 sm:h-16 rounded-full bg-white/10 blur-lg" />
               </div>
               
               {/* Small floating badge - adjusted for mobile */}
